@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu</title>
+    <style>
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Cố định header trên đầu */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    border-radius: 50px;
+    width: 80%;
+    margin: 0 auto; /* Loại bỏ margin để không bị đẩy xuống */
+}
+
+
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('025.png') no-repeat center center/cover;
+            font-family: 'Courier', sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 90%;
+            position: relative;
+            z-index: 2;
+        }
+        h1 {
+            font-size: 3.5rem;
+        }
+        p {
+            font-size: 1.4rem;
+            line-height: 1.6;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        
+<a href="index.html">New</a>
+<a href="about.html">About Us</a>
+        <a href="delivery.html">Delivery</a>
+        <a href="collection.html">Collection</a>
+        <a href="contacts.html">Contacts</a>
+    </nav>
+</header>
+
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Welcome to Our Shop</h1>
+        <p>Luôn cập nhận các mẫu chất lượng nhất, hiên đại nhất,<br>
+           Phục vụ các mom từ lúc bắt đầu hành trình làm mẹ và cùng các mom trong hành trình nuôi bé đến lớn<br>
+           Không chỉ là một người bán hàng .<br>
+           mà còn là một người bạn cố vấn tâm đắc.<br>
+<br>
+<br>
+*Mua hàng qua FB chính chủ sẽ được giảm 5%*<br>
+Mua hàng tổng Bill trên 20trieu se được giảm 1tr5<br>
+Giới thiệu bạn bè mua hàng thành công tích điểm +1 --> Tích được 5 điểm tặng 1 sản phẩm bất kì trị giá trên 500k<br>
+Đồng cảm nếu là mẹ đơn thân --> Giảm ngay 5% cho mẹ đơn thân<br>
+Vào ngày 1 hàng tháng có sale luôn từ 10-15%<br>
+Nhận gói quà free!!<br>
+
+<br>
+<br>
+- Cứ tự nhiên trò chuyện, shop sẵn sàng lắng nghe và tư vấn mọi lúc mọi nơi-  </p>
+
+    </div>
+</body>
+</html>
