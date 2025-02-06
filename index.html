@@ -44,6 +44,12 @@
         header nav a:hover {
             text-decoration: underline;
         }
+@media screen and (max-width: 768px) {
+  .header-nav {
+    font-size: 14px; /* Giảm kích thước chữ */
+    padding: 10px; /* Điều chỉnh khoảng cách */
+  }
+}
 
         /* Banner chỉnh sửa */
         .banner {
@@ -115,12 +121,12 @@ font-family: 'Poppins', sans-serif;
     }
     
 .about-image {
-    width: auto; /* Giữ nguyên chiều rộng gốc */
-    height: auto; /* Giữ nguyên chiều cao gốc */
-    max-width: 100%; /* Đảm bảo không vượt quá khung chứa */
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Chiều rộng tối đa */
+  max-width: 100%; 
+  height: auto; /* Giữ tỷ lệ khung hình */
+  aspect-ratio: 16/9; /* Giữ tỷ lệ chuẩn của video */
 }
+
 
 .sub-text {
     display: flex;
