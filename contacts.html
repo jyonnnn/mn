@@ -6,13 +6,37 @@
     <title>Contact - Norm Architects</title>
     <style>
         @media (max-width: 768px) {  /* Áp dụng cho điện thoại */
-    .menu {
-        display: block; /* Chẳng hạn, menu từ ngang thành dọc */
-    }
-    .content {
-        font-size: 14px; /* Nhỏ hơn cho màn hình nhỏ */
-    }
-}
+            .container {
+                flex-direction: column; /* Chuyển từ dạng ngang sang dọc */
+                padding: 20px;
+            }
+
+            .left, .right {
+                width: 100%; /* Chiếm toàn bộ chiều rộng */
+                padding: 20px;
+                margin: 10px 0;
+            }
+
+            .left h1 {
+                font-size: 30px; /* Điều chỉnh kích thước chữ cho h1 */
+            }
+
+            .description {
+                font-size: 14px;
+            }
+
+            .info p {
+                font-size: 12px;
+            }
+
+            .info strong {
+                font-size: 14px;
+            }
+
+            .social a {
+                font-size: 14px; /* Tăng kích thước chữ cho các liên kết xã hội */
+            }
+        }
 
         header {
             display: flex;
@@ -22,7 +46,6 @@
             background-color: #fff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             position: sticky;
-            position: fixed;
             top: 0;
             z-index: 1000;
             border-radius: 50px;
@@ -44,12 +67,14 @@
         header nav a:hover {
             text-decoration: underline;
         }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
+
         body {
             background-color: #EDEDED;
             display: flex;
@@ -58,6 +83,7 @@
             height: 100vh;
             position: relative;
         }
+
         .contact-page {
             position: absolute;
             top: 20px;
@@ -65,6 +91,7 @@
             font-size: 12px;
             color: #333;
         }
+
         .container {
             width: 80%;
             max-width: 1200px;
@@ -73,12 +100,15 @@
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 20px;
             overflow: hidden;
+            margin: 0 auto;
         }
+
         .left {
             width: 60%;
             padding: 60px;
             background-color: white;
         }
+
         .right {
             width: 40%;
             background-color: #222;
@@ -88,102 +118,109 @@
             color: #fff;
             padding: 20px;
         }
+
         .right a, .right p, .right strong {
             color: #fff;
         }
+
         .right a {
             text-decoration: none;
         }
+
         h1 {
             font-size: 48px;
             font-weight: bold;
             margin-bottom: 30px;
         }
+
         p, a {
             font-size: 16px;
             color: #333;
             text-decoration: none;
         }
+
         .description {
             font-size: 16px;
             color: #555;
             margin-bottom: 30px;
         }
+
         .info {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
+
         .info p {
             font-size: 14px;
             color: gray;
             margin-bottom: 5px;
         }
+
         .info strong {
             color: white;
         }
+
         .social {
             margin-top: 30px;
         }
+
         .social a {
             margin-right: 15px;
             font-weight: bold;
             color: white;
         }
-*:where(:not(img, svg))[color="white"] {
-    color: #a3a0a0 !important;
-    font-weight: normal !important;
-}
 
+        *:where(:not(img, svg))[color="white"] {
+            color: #a3a0a0 !important;
+            font-weight: normal !important;
+        }
     </style>
 </head>
 <body>
 <header>
     <nav>
-        
-<a href="index.html">New</a>
-<a href="about.html">About Us</a>
+        <a href="index.html">New</a>
+        <a href="about.html">About Us</a>
         <a href="delivery.html">Delivery</a>
         <a href="collection.html">Collection</a>
         <a href="contacts.html">Contacts</a>
     </nav>
 </header>
-    <div class="container">
-        <div class="left">
-            <h1>CONTACT</h1>
-            <p class="description">Cảm ơn vì đã tin tưởng!<br>
-            Thông tin thanh toán<br>
-            MB Bank 01010256789 Nguyễn Huyền Trang</p>
-        </div>
-        <div class="right">
-            <div class="content">
-                <div class="info">
-                    <div>
-                        <p>Nhân viên tư vấn</p>
-                        <strong>Nguyễn Huyền Trang</strong>
-                    </div>
-                    <div>
-                        <p>Thời gian làm việc</p>
-                        <strong>24/24</strong>
-                    </div>
-                    <div>
-                        <p>Số điện thoại</p>
-                        <strong>(+82)10-5698-5386</strong>
-                    </div>
-                    <div>
-                        <p>Nền tảng</p>
-                        <strong>Facebook, Instagram, Zalo, Shopee, Tiktok</strong>
-                    </div>
+<div class="container">
+    <div class="left">
+        <h1>CONTACT</h1>
+        <p class="description">Cảm ơn vì đã tin tưởng!<br>Thông tin thanh toán<br>MB Bank 01010256789 Nguyễn Huyền Trang</p>
+    </div>
+    <div class="right">
+        <div class="content">
+            <div class="info">
+                <div>
+                    <p>Nhân viên tư vấn</p>
+                    <strong>Nguyễn Huyền Trang</strong>
                 </div>
-                <div class="social">
-                    <p>Follow us</p>
-                    <a href="https://www.facebook.com/profile.php?id=61555650014754" target="_blank">FB</a>
-                    <a href="https://www.instagram.com/fromhj_on?fbclid=IwY2xjawIRP2JleHRuA2FlbQIxMAABHRgK9SUUUWvWWtEX70g31I1rI1XcoYwcfQgFpwHGjmw-3izTqdhCugUd9g_aem_4LzHa75upZQuOPQH8H-CXw" target="_blank">IG</a>
-                    <a href="https://shopee.vn/reviewmevabeee?entryPoint=ShopBySearch&searchKeyword=reviewmevabeee" target="_blank">Shopee</a>
-                    <a href="https://www.tiktok.com/@reviewmevabeee?_t=ZS-8tgRNuqnkl2&_r=1" target="_blank">Tiktok</a>
+                <div>
+                    <p>Thời gian làm việc</p>
+                    <strong>24/24</strong>
                 </div>
+                <div>
+                    <p>Số điện thoại</p>
+                    <strong>(+82)10-5698-5386</strong>
+                </div>
+                <div>
+                    <p>Nền tảng</p>
+                    <strong>Facebook, Instagram, Zalo, Shopee, Tiktok</strong>
+                </div>
+            </div>
+            <div class="social">
+                <p>Follow us</p>
+                <a href="https://www.facebook.com/profile.php?id=61555650014754" target="_blank">FB</a>
+                <a href="https://www.instagram.com/fromhj_on?fbclid=IwY2xjawIRP2JleHRuA2FlbQIxMAABHRgK9SUUUWvWWtEX70g31I1rI1XcoYwcfQgFpwHGjmw-3izTqdhCugUd9g_aem_4LzHa75upZQuOPQH8H-CXw" target="_blank">IG</a>
+                <a href="https://shopee.vn/reviewmevabeee?entryPoint=ShopBySearch&searchKeyword=reviewmevabeee" target="_blank">Shopee</a>
+                <a href="https://www.tiktok.com/@reviewmevabeee?_t=ZS-8tgRNuqnkl2&_r=1" target="_blank">Tiktok</a>
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>
