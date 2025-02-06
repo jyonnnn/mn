@@ -108,6 +108,16 @@
             text-decoration: underline;
         }
 
+/* Áp dụng thu nhỏ cho tất cả phần tử trên trang */
+body {
+    transform: scale(0.9); /* Thu nhỏ tất cả mọi thứ lại còn 90% */
+    transform-origin: top center; /* Giữ nguyên vị trí gốc ở phía trên và giữa */
+}
+
+/* Loại trừ header khỏi việc thu nhỏ */
+header {
+    transform: none; /* Không áp dụng transform cho header */
+}
 
     </style>
 </head>
