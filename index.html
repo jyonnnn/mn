@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clothing Store</title>
@@ -19,43 +18,33 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 15px;
             background-color: #fff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-radius: 50px;
-            width: 80%;
-            margin: 20px auto;
+            width: 100%;
         }
 
         header nav {
             display: flex;
-            gap: 20px;
+            gap: 15px;
         }
 
         header nav a {
             text-decoration: none;
             color: #000;
-            font-size: 18px;
+            font-size: 16px;
         }
 
-        header nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Banner chỉnh sửa */
         .banner {
             display: flex;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
-            scrollbar-width: none; /* Ẩn scrollbar trên Firefox */
-            -ms-overflow-style: none; /* Ẩn scrollbar trên IE */
-        }
-
-        .banner::-webkit-scrollbar {
-            display: none; /* Ẩn scrollbar trên Chrome/Safari */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            width: 100%;
         }
 
         .banner img {
@@ -65,128 +54,75 @@
             object-fit: cover;
         }
 
-        .dots {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-        }
-
-        .dots span {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: rgba(0, 0, 0, 0.5);
-            cursor: pointer;
-        }
-
-        .dots span.active {
-            background-color: #000;
-        }
-
         .section {
-            padding: 60px 40px;
+            padding: 40px 20px;
+            text-align: center;
         }
 
         .section h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
+            font-size: 28px;
+            margin-bottom: 15px;
         }
 
-        .about-us {
-        padding: 40px 0;
-    }
-    
-    .about-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-        align-items: center;
-    }
-    
-    .about-content {
-        display: flex;
-font-family: 'Poppins', sans-serif;
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            text-align: center;
+        }
 
-        flex-direction: column;
-        gap: 25px;
-    }
-    
-.about-image {
-    width: auto; /* Giữ nguyên chiều rộng gốc */
-    height: auto; /* Giữ nguyên chiều cao gốc */
-    max-width: 100%; /* Đảm bảo không vượt quá khung chứa */
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+        .about-image, .sub-text img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
 
-.sub-text {
-    display: flex;
-font-family: 'Poppins', sans-serif;
-    align-items: center; /* Căn giữa theo chiều dọc */
-    justify-content: space-between; /* Tạo khoảng cách hợp lý giữa ảnh và chữ */
-    flex-direction: row; /* Đảm bảo ảnh và chữ nằm ngang */
-    gap: 20px; /* Tạo khoảng cách giữa ảnh và chữ */
-}
-
-.sub-text img {
-    width: 700px; /* Chiều rộng lớn hơn chiều cao (16:9) */
-    height: 400px; /* Giữ đúng tỷ lệ 16:9 */
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.text-content {
-    flex: 1; /* Cho phép phần chữ chiếm hết không gian còn lại */
-    font-size: 16px;
-    color: #333;
-    line-height: 1.6;
-}
-
-
-.read-more {
-    text-decoration: none;
-    color: #000;
-    font-size: 18px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    justify-content: flex-end;
-}
-
-.read-more span {
-    margin-left: 10px;
-}
-
-
+        .sub-text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            text-align: center;
+        }
 
         .popular {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
         }
 
         .popular img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
             aspect-ratio: 1 / 1;
             border-radius: 8px;
         }
-        @media (max-width: 768px) {
-  .menu {
-    display: block;
-  }
-  .box {
-    width: 100%;
-  }
-}
+
+        @media (min-width: 768px) {
+            .about-container {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .sub-text {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .section {
+                padding: 60px 40px;
+            }
+
+            .section h2 {
+                font-size: 36px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
 <header>
