@@ -13,7 +13,7 @@
             background-color: #fff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             position: sticky;
-           position: fixed;
+            position: fixed;
             top: 0;
             z-index: 1000;
             border-radius: 50px;
@@ -56,19 +56,26 @@
         h1 {
             font-size: 3rem;
         }
-        p {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-        .overlay {
-            position: flex;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
+p {
+    font-size: 1rem; /* Kích thước chữ */
+    line-height: 1.2; /* Khoảng cách giữa các dòng gần lại */
+    text-align: center; /* Căn giữa chữ theo chiều ngang */
+    margin: 0 auto; /* Căn giữa thẻ <p> theo chiều ngang */
+    max-width: 90%; /* Giới hạn chiều rộng để chữ không quá rộng */
+    word-spacing: 0.2em; /* Khoảng cách giữa các chữ thưa ra */
+}
+
+.overlay {
+    position: fixed; /* Đặt phần tử cố định ở một vị trí trên màn hình */
+    top: 50%; /* Đặt phần tử ở giữa màn hình theo chiều dọc */
+    left: 50%; /* Đặt phần tử ở giữa màn hình theo chiều ngang */
+    width: 100%; /* Chiều rộng của phần tử chiếm 100% */
+    height: 100%; /* Chiều cao của phần tử chiếm 100% */
+    background: rgba(0, 0, 0, 0.5); /* Màu nền đen với độ trong suốt 50% */
+    z-index: 1; /* Đặt thứ tự hiển thị của phần tử (được hiển thị trên các phần tử khác có giá trị z-index thấp hơn) */
+    transform: translate(-50%, -50%); /* Căn giữa phần tử theo cả chiều ngang và chiều dọc */
+}
+
     </style>
 </head>
 <body>
@@ -88,8 +95,6 @@
         <h1>Welcome to Our Shop</h1>
         <p>Luôn cập nhận các mẫu chất lượng nhất, hiên đại nhất,<br>
            Phục vụ các mom từ lúc bắt đầu hành trình làm mẹ và cùng các mom trong hành trình nuôi bé đến lớn<br>
-           Không chỉ là một người bán hàng .<br>
-           mà còn là một người bạn cố vấn tâm đắc.<br>
 <br>
 <br>
 *Mua hàng qua FB chính chủ sẽ được giảm 5%*<br>
