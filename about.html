@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giới thiệu</title>
     <style>
+            #footer {
+        text-align: center;
+        font-size: 8px;
+        font-family: 'Arial', sans-serif;
+        padding: 20px;
+        color: #888;
+    }
+    .gray-text {
+        color: #888;
+        font-size: 8px;
+    }
+    .underlined {
+        text-decoration: underline;
+    }
+    .non-tel {
+        user-select: none;
+    }
+    .social-icons {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .social-icons img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        margin: 0 5px;
+    }
        header {
             display: flex;
             justify-content: center;
@@ -86,7 +114,7 @@ p {
 <a href="about.html">About Us</a>
         <a href="delivery.html">Delivery</a>
         <a href="collection.html">Collection</a>
-        <a href="contacts.html">Contacts</a>
+        <a href="#footer">Contacts</a>
     </nav>
 </header>
 
@@ -109,5 +137,26 @@ Nhận gói quà free!!<br>
 - Cứ tự nhiên trò chuyện, shop sẵn sàng lắng nghe và tư vấn mọi lúc mọi nơi-  </p>
 
     </div>
+        
+    <!-- Các icon mạng xã hội -->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61555650014754" target="_blank">
+            <img src="045.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/fromhj_on?fbclid=IwY2xjawIRP2JleHRuA2FlbQIxMAABHRgK9SUUUWvWWtEX70g31I1rI1XcoYwcfQgFpwHGjmw-3izTqdhCugUd9g_aem_4LzHa75upZQuOPQH8H-CXw" target="_blank">
+            <img src="042.png" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com/@reviewmevabeee?_t=ZS-8tgRNuqnkl2&_r=1" target="_blank">
+            <img src="043.png" alt="TikTok">
+        </a>
+        <a href="https://shopee.vn/reviewmevabeee?entryPoint=ShopBySearch&searchKeyword=reviewmevabeee" target="_blank">
+            <img src="040.png" alt="Shopee">
+        </a>
+    </div>
+<footer id="footer">
+    <p class="gray-text">
+        Số điện thoại: <span class="underlined non-tel">(+82)10-5698-5386</span> &nbsp; | &nbsp; 
+        MB Bank: <span class="underlined non-tel">01010256789 Nguyễn Huyền Trang</span>
+</footer>
 </body>
 </html>
