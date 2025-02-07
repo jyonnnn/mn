@@ -5,34 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giới thiệu</title>
     <style>
- #footer {
-        text-align: center;
-        font-size: 8px;
-        font-family: 'Arial', sans-serif;
-        padding: 20px;
-        color: #888;
-    }
-    .gray-text {
-        color: #888;
-        font-size: 8px;
-    }
-    .underlined {
-        text-decoration: underline;
-    }
-    .non-tel {
-        user-select: none;
-    }
-    .social-icons {
-        margin-top: 10px;
-        display: flex;
-        justify-content: center;
-    }
-    .social-icons img {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        margin: 0 5px;
-    }
+#footer {
+    position: fixed; /* Hoặc absolute nếu muốn cố định ở cuối nội dung */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 8px;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    color: #888;
+    background-color: #fff; /* Để tránh trùng màu nền với nội dung */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    margin-bottom: 10px; /* Tạo khoảng cách nhỏ giữa icon và nội dung footer */
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 0 5px;
+    border: 0.5px solid black; /* Viền đen siêu mỏng */
+}
+
        header {
             display: flex;
             justify-content: center;
