@@ -1,60 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Norm Architects</title>
+    <title>Thông tin thanh toán</title>
     <style>
-        @media (max-width: 768px) {  /* Áp dụng cho điện thoại */
-            .container {
-                flex-direction: column; /* Chuyển từ dạng ngang sang dọc */
-                padding: 10px;
-                width: 100%;
-            }
-
-            .left, .right {
-                width: 100%; /* Chiếm toàn bộ chiều rộng */
-                padding: 20px;
-                margin-bottom: 20px;
-            }
-
-            .left h1 {
-                font-size: 30px; /* Điều chỉnh kích thước chữ cho h1 */
-            }
-
-            .description {
-                font-size: 14px;
-                margin-top: 10px;
-            }
-
-            .info p {
-                font-size: 12px;
-                margin-bottom: 5px;
-            }
-
-            .info strong {
-                font-size: 14px;
-            }
-
-            .social a {
-                font-size: 14px;
-                margin-right: 10px;
-            }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #EDEDED;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
         }
 
+        /* Header luôn ở trên cùng, căn giữa */
         header {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
             border-radius: 50px;
             width: 80%;
-            margin: 20px auto;
+            z-index: 1000;
         }
 
         header nav {
@@ -65,92 +46,40 @@
         header nav a {
             text-decoration: none;
             color: #000;
-            font-size: 12px;
+            font-size: 14px;
         }
 
         header nav a:hover {
             text-decoration: underline;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #EDEDED;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            height: auto;
-            min-height: 100vh;
-            position: relative;
-            padding-top: 80px; /* Để tránh che header */
-        }
-
-        .container {
-            width: 80%;
-            max-width: 1200px;
-            display: flex;
-            flex-wrap: wrap;
+        /* Phần trắng căn giữa trên màn hình */
+        .white-box {
             background-color: white;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 20px;
-            margin: 20px auto;
-            overflow: hidden;
-        }
-
-        .left {
-            width: 60%;
-            padding: 60px;
-            background-color: white;
-            text-align: center; /* Căn giữa phần này */
-        }
-
-        .right {
-            width: 40%;
-            background-color: #222;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
             padding: 20px;
-            text-align: center; /* Căn giữa phần này */
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 400px;
         }
 
-        .right a, .right p, .right strong {
-            color: #fff;
-        }
-
-        .right a {
-            text-decoration: none;
-        }
-
-        h1 {
-            font-size: 48px;
-            font-weight: bold;
-            margin-bottom: 30px;
-        }
-
-        p, a {
-            font-size: 16px;
-            color: #333;
-            text-decoration: none;
-        }
-
-        .description {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
-        .info {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            text-align: center; /* Căn giữa các thông tin */
+        /* Phần đen nằm dưới */
+        .black-box {
+            background-color: #222;
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 80%;
+            max-width: 600px;
         }
 
         .info p {
@@ -158,92 +87,35 @@
             color: gray;
             margin-bottom: 5px;
         }
-
         .info strong {
             color: white;
-        }
-
-        .social {
-            margin-top: 30px;
-            text-align: center; /* Căn giữa các link xã hội */
-        }
-
-        .social a {
-            margin-right: 15px;
-            font-weight: bold;
-            color: white;
-        }
-
-        *:where(:not(img, svg))[color="white"] {
-            color: #a3a0a0 !important;
-            font-weight: normal !important;
-        }
-
-        /* Phần màu trắng ở trên, căn giữa */
-        .top-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 50px 20px;
-            background-color: white;
-            width: 100%;
-        }
-
-        .top-section p {
-            text-align: center;
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
 <header>
     <nav>
-        <a href="index.html">New</a>
-        <a href="about.html">About Us</a>
-        <a href="delivery.html">Delivery</a>
-        <a href="collection.html">Collection</a>
-        <a href="contacts.html">Contacts</a>
+        <a href="#">About Us</a>
+        <a href="#">Delivery</a>
+        <a href="#">Collection</a>
+        <a href="#">Contacts</a>
     </nav>
 </header>
-<div class="top-section">
-    <p>Cảm ơn vì đã tin tưởng!<br>Thông tin thanh toán<br>MB Bank 01010256789 Nguyễn Huyền Trang</p>
+
+<!-- Phần trắng -->
+<div class="white-box">
+    <p>Cảm ơn vì đã tin tưởng!<br>
+    Thông tin thanh toán<br>
+    MB Bank 01010256789 Nguyễn Huyền Trang</p>
 </div>
-<div class="container">
-    <div class="left">
-        <h1>CONTACT</h1>
-        <p class="description">Cảm ơn vì đã tin tưởng!<br>Thông tin thanh toán<br>MB Bank 01010256789 Nguyễn Huyền Trang</p>
-    </div>
-    <div class="right">
-        <div class="content">
-            <div class="info">
-                <div>
-                    <p>Nhân viên tư vấn</p>
-                    <strong>Nguyễn Huyền Trang</strong>
-                </div>
-                <div>
-                    <p>Thời gian làm việc</p>
-                    <strong>24/24</strong>
-                </div>
-                <div>
-                    <p>Số điện thoại</p>
-                    <strong>(+82)10-5698-5386</strong>
-                </div>
-                <div>
-                    <p>Nền tảng</p>
-                    <strong>Facebook, Instagram, Zalo, Shopee, Tiktok</strong>
-                </div>
-            </div>
-            <div class="social">
-                <p>Follow us</p>
-                <a href="https://www.facebook.com/profile.php?id=61555650014754" target="_blank">FB</a>
-                <a href="https://www.instagram.com/fromhj_on?fbclid=IwY2xjawIRP2JleHRuA2FlbQIxMAABHRgK9SUUUWvWWtEX70g31I1rI1XcoYwcfQgFpwHGjmw-3izTqdhCugUd9g_aem_4LzHa75upZQuOPQH8H-CXw" target="_blank">IG</a>
-                <a href="https://shopee.vn/reviewmevabeee?entryPoint=ShopBySearch&searchKeyword=reviewmevabeee" target="_blank">Shopee</a>
-                <a href="https://www.tiktok.com/@reviewmevabeee?_t=ZS-8tgRNuqnkl2&_r=1" target="_blank">Tiktok</a>
-            </div>
-        </div>
+
+<!-- Phần đen -->
+<div class="black-box">
+    <div class="info">
+        <p>Nhân viên tư vấn: <strong>Nguyễn Huyền Trang</strong></p>
+        <p>Thời gian làm việc: <strong>24/24</strong></p>
+        <p>Số điện thoại: <strong>(+82)10-5698-5386</strong></p>
+        <p>Nền tảng: <strong>Facebook, Instagram, Zalo, Shopee, Tiktok</strong></p>
     </div>
 </div>
 </body>
