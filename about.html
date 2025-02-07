@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giới thiệu</title>
     <style>
-            #footer {
-        text-align: center;
-        font-size: 8px;
-        font-family: 'Arial', sans-serif;
-        padding: 20px;
-        color: #888;
-    }
+           #footer {
+    position: fixed; /* Hoặc absolute nếu muốn cố định ở cuối nội dung thay vì cuối màn hình */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 8px;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    color: #888;
+    background-color: #fff; /* Để tránh trùng màu nền với nội dung */
+}
+
     .gray-text {
         color: #888;
         font-size: 8px;
