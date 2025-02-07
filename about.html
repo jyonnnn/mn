@@ -77,18 +77,18 @@ p {
     z-index: 1;
     transform: translate(-50%, -50%);
 }
-        #footer {
-    position: fixed;
-    width: 100%;
-    text-align: center;
-    font-size: 10px; 
-    font-family: 'Arial', sans-serif;
+#footer {
+    position: fixed; /* Giữ footer cố định */
+    bottom: 0; /* Đẩy xuống đáy màn hình */
+    left: 0;
+    width: 100%; /* Trải rộng toàn bộ màn hình */
+    text-align: center; /* Căn giữa nội dung */
     padding: 10px;
-    color: #888;
-    align-items: center;
+    z-index: 1000; /* Đảm bảo nằm trên các phần tử khác */
 }
+
     .gray-text {
-        color: #888;
+        color: while;
         font-size: 8px;
     }
     .underlined {
@@ -105,8 +105,8 @@ p {
 }
 
 .social-icons img {
-    width: 35px; /* Nhỏ hơn */
-    height: 35px;
+    width: 45px; /* Nhỏ hơn */
+    height: 45px;
     border-radius: 50%;
     margin: 0 3px;
     border: 0.5px solid black;
