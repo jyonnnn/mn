@@ -97,14 +97,18 @@
         height: 100vh;
     }
     .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
-        max-width: 800px;
-        text-align: center;
-    }
+    display: flex;               /* Dùng Flexbox */
+    flex-direction: column;      /* Xếp nội dung theo chiều dọc */
+    align-items: flex-start;     /* Căn nội dung về bên trái */
+    justify-content: flex-start; /* Căn nội dung lên trên */
+    width: 80%;                  /* Chiều rộng 80% màn hình */
+    max-width: 800px;            /* Giới hạn chiều rộng tối đa */
+    text-align: left;            /* Căn văn bản về bên trái */
+    padding: 20px;               /* Thêm khoảng cách bên trong */
+    border-radius: 20px;         /* Bo tròn viền */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+
     .content {
         width: 70%;
         padding: 20px;
