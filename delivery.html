@@ -5,57 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winify Logistics</title>
     <link href="https://fonts.google.com/share?selection.family=Alumni+Sans+Pinstripe:ital@0;1" rel="stylesheet">
-    <style>
+        <style>
         * {
             font-family: 'Alumni Sans Pinstripe', sans-serif;
         }
-    </style>
-<style>
-#footer {
-    position: fixed; /* Giữ footer cố định */
-    bottom: 0; /* Đẩy xuống đáy màn hình */
-    left: 0;
-    width: 100%; /* Trải rộng toàn bộ màn hình */
-    text-align: center; /* Căn giữa nội dung */
-    padding: 10px;
-    z-index: 1000; /* Đảm bảo nằm trên các phần tử khác */
-}
-
-    .gray-text {
-        color: while;
-        font-size: 8px;
-    }
-    .underlined {
-        text-decoration: underline;
-    }
-    .non-tel {
-        user-select: none;
-    }
-
-.social-icons {
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: center;
-}
-
-.social-icons img {
-    width: 45px; /* Nhỏ hơn */
-    height: 45px;
-    border-radius: 50%;
-    margin: 0 3px;
-    border: 0.5px solid black;
-}
-
-
-    @media (max-width: 768px) {  /* Áp dụng cho điện thoại */
-    .menu {
-        display: block; /* Chẳng hạn, menu từ ngang thành dọc */
-    }
-    .content {
-        font-size: 14px; /* Nhỏ hơn cho màn hình nhỏ */
-    }
-}
-
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
         header {
             display: flex;
             justify-content: center;
@@ -63,94 +29,76 @@
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
             position: fixed;
             top: 0;
-            z-index: 1000;
-            border-radius: 50px;
             width: 80%;
             margin: 20px auto;
+            border-radius: 50px;
+            z-index: 1000;
         }
-
+        
         header nav {
             display: flex;
             gap: 20px;
         }
-
+        
         header nav a {
             text-decoration: none;
             color: #000;
             font-size: 12px;
         }
-
+        
         header nav a:hover {
             text-decoration: underline;
         }
-    body {
-        font-family: 'Poppins', sans-serif;
-        background-color: #000;
-        color: #fff;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-    .container {
-    display: flex;               /* Dùng Flexbox */
-    flex-direction: column;      /* Xếp nội dung theo chiều dọc */
-    align-items: flex-start;     /* Căn nội dung về bên trái */
-    justify-content: flex-start; /* Căn nội dung lên trên */
-    width: 100%;                  /* Chiều rộng 80% màn hình */
-    max-width: 1000px;            /* Giới hạn chiều rộng tối đa */
-    text-align: left;            /* Căn văn bản về bên trái */
-    padding: 20px;               /* Thêm khoảng cách bên trong */
-    border-radius: 40px;         /* Bo tròn viền */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
-}
-
-    .content {
-        width: 100%;
-        padding: 20px;
-    }
-    .header {
-        text-align: center;
-        font-size: 1em;
-        margin-bottom: 20px;
-    }
-    .services {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-    }
-    .service-item {
-        background: #222;
-        padding: 15px;
-        margin: 10px 0;
-        width: 80%;
-        text-align: left;
-        font-size: 0.9em;
-        border-radius: 5px;
-    }
-    .contact {
-        margin-top: 30px;
-        font-size: 0.9em;
-    }
-    .image-container {
-        width: 50%;
-        position: relative;
-        margin-top: 20px;
-    }
-    .image-container img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        opacity: 0.6;
-        border-radius: 10px;
-    }
-</style>
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            max-width: 1000px;
+            text-align: left;
+            padding: 20px;
+            border-radius: 50px;
+            background: #222;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+            margin-top: 100px;
+            flex-grow: 1;
+        }
+        
+        .services .service-item {
+            background: #333;
+            padding: 15px;
+            margin: 10px 0;
+            width: 80%;
+            text-align: left;
+            font-size: 0.9em;
+            border-radius: 20px;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .social-icons img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            margin: 0 3px;
+            border: 0.5px solid black;
+        }
+        
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -180,8 +128,7 @@
             </div>
         </div>
 
-    </div>
-        </script>  
+    </div> 
     <!-- Các icon mạng xã hội -->
     <div class="social-icons">
         <a href="https://www.facebook.com/profile.php?id=61555650014754" target="_blank">
@@ -202,6 +149,5 @@
         Số điện thoại: <span class="underlined non-tel">(+82)10-5698-5386</span> &nbsp; | &nbsp; 
         MB Bank: <span class="underlined non-tel">01010256789 Nguyễn Huyền Trang</span>
 </footer>
-</script>
 </body>
 </html>
