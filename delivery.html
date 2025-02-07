@@ -11,15 +11,18 @@
         }
     </style>
 <style>
- #footer {
-        text-align: center;
-        font-size: 8px;
-        font-family: 'Arial', sans-serif;
-        padding: 20px;
-        color: #888;
-    }
+#footer {
+    position: fixed; /* Giữ footer cố định */
+    bottom: 0; /* Đẩy xuống đáy màn hình */
+    left: 0;
+    width: 100%; /* Trải rộng toàn bộ màn hình */
+    text-align: center; /* Căn giữa nội dung */
+    padding: 10px;
+    z-index: 1000; /* Đảm bảo nằm trên các phần tử khác */
+}
+
     .gray-text {
-        color: #888;
+        color: while;
         font-size: 8px;
     }
     .underlined {
@@ -28,18 +31,21 @@
     .non-tel {
         user-select: none;
     }
-    .social-icons {
-        margin-top: 10px;
-        display: flex;
-        justify-content: center;
-    }
-    .social-icons img {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        margin: 0 5px;
-        border: 0.5px solid black;
+
+.social-icons {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
 }
+
+.social-icons img {
+    width: 45px; /* Nhỏ hơn */
+    height: 45px;
+    border-radius: 50%;
+    margin: 0 3px;
+    border: 0.5px solid black;
+}
+
 
     @media (max-width: 768px) {  /* Áp dụng cho điện thoại */
     .menu {
