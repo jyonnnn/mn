@@ -250,7 +250,34 @@ font-family: 'Poppins', sans-serif;
     75% { transform: translateX(-75%); }
 }
 
-
+.contact-section {
+            text-align: center;
+            padding: 40px;
+            background: #fff;
+            font-family: 'Nixie One', cursive;
+        }
+        .contact-section h2 {
+            font-size: 28px;
+        }
+        .contact-box {
+            display: inline-block;
+            border: 1px solid #000;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 5px;
+            display: inline-block;
+        }
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
     </style>
 </head>
 
@@ -263,7 +290,7 @@ font-family: 'Poppins', sans-serif;
 <a href="about.html">About Us</a>
         <a href="delivery.html">Delivery</a>
         <a href="collection.html">Collection</a>
-        <a href="contacts.html">Contacts</a>
+        <a href="#contact">Contacts</a>
     </nav>
 </header>
 
@@ -346,6 +373,28 @@ Chúng em tự hào mang đến những sản phẩm chất lượng, an toàn v
 
     setInterval(autoSlide, 3000);
 </script>
+<section id="contact" class="contact-section">
+    <h2>Contact Ú</h2>
+    <div class="contact-box">
+        <p><strong>Tư vấn:</strong> Nguyễn Huyền Trang</p>
+        <p><strong>Địa chỉ:</strong> Seoul, Korea</p>
+        <p><strong>Số điện thoại:</strong> (+82)10-5698-5386</p>
+        <p><strong>Zalo:</strong> (+82)10-5698-5386</p>
+        <p><strong>Thanh toán:</strong> MB Bank 01010256789 Nguyễn Huyền Trang</p>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61555650014754" target="_blank"><img src="045.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/fromhj_on?fbclid=IwY2xjawIRP2JleHRuA2FlbQIxMAABHRgK9SUUUWvWWtEX70g31I1rI1XcoYwcfQgFpwHGjmw-3izTqdhCugUd9g_aem_4LzHa75upZQuOPQH8H-CXw" target="_blank"><img src="042.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@reviewmevabeee?_t=ZS-8tgRNuqnkl2&_r=1" target="_blank"><img src="043.png" alt="TikTok"></a>
+        <a href="https://shopee.vn/reviewmevabeee?entryPoint=ShopBySearch&searchKeyword=reviewmevabeee" target="_blank"><img src="040.png" alt="Shopee"></a>
+    </div>
+</section>
 
+<script>
+    document.querySelector('a[href="#contact"]').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
 </body>
 </html>
