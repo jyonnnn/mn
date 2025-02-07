@@ -6,107 +6,107 @@
     <title>Giới thiệu</title>
     <style>
 #footer {
-    position: fixed; /* Hoặc absolute nếu muốn cố định ở cuối nội dung */
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: 8px;
+    font-size: 10px; /* Chữ nhỏ hơn */
     font-family: 'Arial', sans-serif;
-    padding: 20px;
+    padding: 10px; /* Giảm padding để không chiếm nhiều chỗ */
     color: #888;
-    background-color: #fff; /* Để tránh trùng màu nền với nội dung */
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1001; /* Đảm bảo hiển thị trên nội dung khác */
 }
 
 .social-icons {
-    margin-bottom: 10px; /* Tạo khoảng cách nhỏ giữa icon và nội dung footer */
+    margin-bottom: 5px;
     display: flex;
     justify-content: center;
 }
 
 .social-icons img {
-    width: 45px;
-    height: 45px;
+    width: 35px; /* Nhỏ hơn */
+    height: 35px;
     border-radius: 50%;
-    margin: 0 5px;
-    border: 0.5px solid black; /* Viền đen siêu mỏng */
+    margin: 0 3px;
+    border: 0.5px solid black;
 }
 
-       header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            position: fixed;
-            top: 0;
-            z-index: 1000;
-            border-radius: 50px;
-            width: 80%;
-            margin: 20px auto;
-        }
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px; /* Giảm padding */
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    border-radius: 30px; /* Giảm cong viền */
+    width: 90%;
+    margin: 10px auto;
+}
 
-        header nav {
-            display: flex;
-            gap: 20px;
-        }
+header nav {
+    display: flex;
+    gap: 15px;
+}
 
-        header nav a {
-            text-decoration: none;
-            color: #000;
-            font-size: 12px;
-        }
+header nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 10px; /* Chữ nhỏ hơn */
+}
 
-        header nav a:hover {
-            text-decoration: underline;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: url('025.png') no-repeat center center/cover;
-            font-family: 'Courier', sans-serif;
-            color: white;
-            text-align: center;
-        }
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('025.png') no-repeat center center/cover;
+    font-family: 'Courier', sans-serif;
+    color: white;
+    text-align: center;
+}
 
-        .content {
-            max-width: 70%;
-            position: relative;
-            z-index: 2;
-        }
-        h1 {
-            font-size: 3rem;
-        }
+.content {
+    max-width: 100%; /* Chữ tràn toàn màn hình */
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 2rem; /* Chữ nhỏ lại */
+}
+
 p {
-    font-size: 1rem; /* Kích thước chữ */
-    line-height: 1.2; /* Khoảng cách giữa các dòng gần lại */
-    text-align: center; /* Căn giữa chữ theo chiều ngang */
-    margin: 0 auto; /* Căn giữa thẻ <p> theo chiều ngang */
-    max-width: 90%; /* Giới hạn chiều rộng để chữ không quá rộng */
-    word-spacing: 0.2em; /* Khoảng cách giữa các chữ thưa ra */
+    font-size: 0.8rem; /* Chữ nhỏ hơn */
+    line-height: 1.2;
+    text-align: justify; /* Căn đều chữ để đọc dễ hơn */
+    margin: 0 auto;
+    max-width: 100%;
+    word-spacing: 0.1em; /* Giảm khoảng cách chữ */
+    padding: 5px; /* Thêm padding để không bị dính mép */
 }
 
 .overlay {
-    position: fixed; /* Đặt phần tử cố định ở một vị trí trên màn hình */
-    top: 50%; /* Đặt phần tử ở giữa màn hình theo chiều dọc */
-    left: 50%; /* Đặt phần tử ở giữa màn hình theo chiều ngang */
-    width: 100%; /* Chiều rộng của phần tử chiếm 100% */
-    height: 100%; /* Chiều cao của phần tử chiếm 100% */
-    background: rgba(0, 0, 0, 0.5); /* Màu nền đen với độ trong suốt 50% */
-    z-index: 1; /* Đặt thứ tự hiển thị của phần tử (được hiển thị trên các phần tử khác có giá trị z-index thấp hơn) */
-    transform: translate(-50%, -50%); /* Căn giữa phần tử theo cả chiều ngang và chiều dọc */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transform: translate(-50%, -50%);
 }
-
-    </style>
+   </style>
 </head>
 <body>
 <header>
